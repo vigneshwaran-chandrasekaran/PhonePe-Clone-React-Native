@@ -2,6 +2,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import { StyleSheet } from "react-native";
+import colors from "../config/colors";
 import {
   HistoryScreen,
   HomeScreen,
@@ -14,7 +15,11 @@ const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      tabBarOptions={{
+        activeTintColor: colors.primary,
+      }}
+    >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
