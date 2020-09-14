@@ -1,11 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
+import Screen from "../components/Screen";
 
 const HomeScreen = () => {
   return (
-    <View>
+    <Screen>
       <Text>HomeScreen</Text>
-    </View>
+    </Screen>
   );
 };
 
