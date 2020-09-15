@@ -23,6 +23,7 @@ const HistoryScreen = () => {
         numColumns={2}
         renderItem={({ item }) => <Text>{item.label}</Text>}
       />
+      <Text>HistoryScreen</Text>
     </Screen>
   );
 };
