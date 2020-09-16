@@ -1,4 +1,4 @@
-import Constants from "expo-constants";
+// import Constants from "expo-constants";
 import React from "react";
 import { SafeAreaView, StyleSheet, View } from "react-native";
 
@@ -12,8 +12,9 @@ function Screen({ children, style }) {
 
 const styles = StyleSheet.create({
   screen: {
-    paddingTop: Constants.statusBarHeight,
+    // paddingTop: Constants.statusBarHeight,
     flex: 1,
+    margin: 10,
   },
   view: {
     flex: 1,

@@ -1,11 +1,12 @@
 import { FontAwesome } from "@expo/vector-icons";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import colors from "../config/colors";
 
-const LinkIcon = ({ label }) => {
+const LinkIcon = ({ label = "", icon = "facebook" }) => {
   return (
     <View style={styles.icon}>
-      <FontAwesome name="facebook" backgroundColor="#3b5998" size={36} />
+      <FontAwesome name={icon} color={colors.primary} size={36} />
       <Text style={styles.iconText}>{label}</Text>
     </View>
   );
@@ -18,9 +19,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flex: 1,
     width: "100%",
+    margin: 10,
   },
   iconText: {
     maxWidth: 100,
     textAlign: "center",
+    fontSize: 14,
   },
 });
