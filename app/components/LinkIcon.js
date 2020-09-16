@@ -18,11 +18,10 @@ const styles = StyleSheet.create({
   icon: {
     alignItems: "center",
     flex: 1,
-    width: "100%",
-    margin: 10,
+    marginBottom: 20,
   },
   iconText: {
-    maxWidth: 100,
+    maxWidth: 150,
     textAlign: "center",
     fontSize: 14,
   },
