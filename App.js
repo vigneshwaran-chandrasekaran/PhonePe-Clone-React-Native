@@ -7,7 +7,7 @@ import AppNavigator from "./app/navigation/AppNavigator";
 export default function App() {
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor={colors.primary} />
+      <StatusBar backgroundColor={colors.primaryDark} />
       <AppNavigator />
     </NavigationContainer>
   );
