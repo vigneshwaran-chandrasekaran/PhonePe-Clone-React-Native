@@ -29,9 +29,9 @@ const offerRewards = [
 
 const OfferRewards = () => {
   return (
-    <View style={styles.quickLinksContainer}>
+    <View style={styles.linksContainer}>
       <FlatList
-        style={styles.quickLinks}
+        style={styles.link}
         data={offerRewards}
         keyExtractor={(item) => item.id.toString()}
         numColumns={3}
@@ -46,18 +46,13 @@ const OfferRewards = () => {
 export default OfferRewards;
 
 const styles = StyleSheet.create({
-  quickLinksContainer: {
+  linksContainer: {
     borderRadius: 10,
     backgroundColor: colors.white,
     padding: 15,
     marginBottom: 10,
   },
-  quickLinks: {
+  link: {
     flexGrow: 0,
-  },
-  quickLinksText: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 20,
   },
 });

@@ -22,10 +22,10 @@ const transferMoney = [
 
 const TransferMoney = () => {
   return (
-    <View style={styles.quickLinksContainer}>
-      <Text style={styles.quickLinksText}>Transfer Money</Text>
+    <View style={styles.linksContainer}>
+      <Text style={styles.linkText}>Transfer Money 1</Text>
       <FlatList
-        style={styles.quickLinks}
+        style={styles.link}
         data={transferMoney}
         keyExtractor={(item) => item.id.toString()}
         numColumns={4}
@@ -40,16 +40,16 @@ const TransferMoney = () => {
 export default TransferMoney;
 
 const styles = StyleSheet.create({
-  quickLinksContainer: {
+  linksContainer: {
     borderRadius: 10,
     backgroundColor: colors.white,
     padding: 15,
     marginBottom: 10,
   },
-  quickLinks: {
+  link: {
     flexGrow: 0,
   },
-  quickLinksText: {
+  linkText: {
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 20,

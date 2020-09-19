@@ -41,10 +41,10 @@ const quickLinks = [
 
 const QuickLinks = () => {
   return (
-    <View style={styles.quickLinksContainer}>
-      <Text style={styles.quickLinksText}>Quick Links 11</Text>
+    <View style={styles.linksContainer}>
+      <Text style={styles.linkText}>Quick Links</Text>
       <FlatList
-        style={styles.quickLinks}
+        style={styles.link}
         data={quickLinks}
         keyExtractor={(item) => item.id.toString()}
         numColumns={4}
@@ -59,16 +59,16 @@ const QuickLinks = () => {
 export default QuickLinks;
 
 const styles = StyleSheet.create({
-  quickLinksContainer: {
+  linksContainer: {
     borderRadius: 10,
     backgroundColor: colors.white,
     padding: 15,
     marginBottom: 10,
   },
-  quickLinks: {
+  link: {
     flexGrow: 0,
   },
-  quickLinksText: {
+  linkText: {
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 20,
