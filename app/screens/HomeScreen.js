@@ -3,24 +3,8 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 import ColorIcon from "../components/ColorIcon";
 import LinkIcon from "../components/LinkIcon";
 import Screen from "../components/Screen";
+import TransferMoney from "../components/screens/home/TransferMoney";
 import colors from "../config/colors";
-
-const transferMoney = [
-  {
-    id: 1,
-    label: "To Contact",
-    value: "To Contact",
-    icon: "contao",
-  },
-  {
-    id: 2,
-    label: "To Account",
-    value: "To Account",
-    icon: "first-order",
-  },
-  { id: 3, label: "To Self", value: "To Self", icon: "user-circle" },
-  { id: 4, label: "Bank Balance", value: "Bank Balance", icon: "university" },
-];
 
 const quickLinks = [
   {
@@ -85,18 +69,7 @@ const offerRewards = [
 const HomeScreen = () => {
   return (
     <Screen>
-      <View style={styles.quickLinksContainer}>
-        <Text style={styles.quickLinksText}>Transfer Money</Text>
-        <FlatList
-          style={styles.quickLinks}
-          data={transferMoney}
-          keyExtractor={(item) => item.id.toString()}
-          numColumns={4}
-          renderItem={({ item }) => (
-            <LinkIcon icon={item.icon} label={item.label} />
-          )}
-        />
-      </View>
+      <TransferMoney />
       <View style={styles.quickLinksContainer}>
         <Text style={styles.quickLinksText}>Quick Links</Text>
         <FlatList
