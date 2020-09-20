@@ -3,13 +3,13 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
 
-const ColorIcon = ({ label = "", icon = "facebook", options }) => {
+const ColorIcon = ({ label, icon = "facebook", options }) => {
   return (
     <View style={styles.icon}>
       <View style={[styles.iconWrap, { backgroundColor: options.bgColor }]}>
         <FontAwesome name={icon} color={colors.white} size={36} />
       </View>
-      <Text style={styles.iconText}>{label}</Text>
+      {label && <Text style={styles.iconText}>{label}</Text>}
     </View>
   );
 };

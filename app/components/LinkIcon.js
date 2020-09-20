@@ -3,11 +3,16 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from "../config/colors";
 
-const LinkIcon = ({ label = "", icon = "facebook" }) => {
+const LinkIcon = ({
+  label,
+  icon = "facebook",
+  color = colors.primary,
+  size = 36,
+}) => {
   return (
     <View style={styles.icon}>
-      <FontAwesome name={icon} color={colors.primary} size={36} />
-      <Text style={styles.iconText}>{label}</Text>
+      <FontAwesome name={icon} color={color} size={size} />
+      {label && <Text style={styles.iconText}>{label}</Text>}
     </View>
   );
 };
