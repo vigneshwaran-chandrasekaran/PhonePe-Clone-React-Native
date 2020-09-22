@@ -1,7 +1,7 @@
-import { FontAwesome } from "@expo/vector-icons";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from "../../config/colors";
+import Icon from "./Icon";
 
 const Header = () => {
   return (
@@ -11,24 +11,9 @@ const Header = () => {
         <Text style={styles.location}>Trichy 4</Text>
       </View>
       <View style={styles.iconsSection}>
-        <FontAwesome
-          style={styles.icon}
-          name={"gift"}
-          color="white"
-          size={24}
-        />
-        <FontAwesome
-          style={styles.icon}
-          name={"gift"}
-          color="white"
-          size={24}
-        />
-        <FontAwesome
-          style={styles.icon}
-          name={"gift"}
-          color="white"
-          size={24}
-        />
+        <Icon name={"qrcode"} style={styles.icon} />
+        <Icon name={"bell"} style={styles.icon} />
+        <Icon name={"question-circle-o"} style={styles.icon} />
       </View>
     </View>
   );
