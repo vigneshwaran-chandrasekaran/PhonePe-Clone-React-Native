@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text } from "react-native";
 import colors from "../../../config/colors";
 import LinkIcon from "../../LinkIcon";
 
@@ -41,18 +41,16 @@ const quickLinks = [
 
 const QuickLinks = () => {
   return (
-    <View style={styles.linksContainer}>
-      <Text style={styles.linkText}>Quick Links</Text>
-      <FlatList
-        style={styles.link}
-        data={quickLinks}
-        keyExtractor={(item) => item.id.toString()}
-        numColumns={4}
-        renderItem={({ item }) => (
-          <LinkIcon icon={item.icon} label={item.label} />
-        )}
-      />
-    </View>
+    <FlatList
+      style={styles.linksContainer}
+      data={quickLinks}
+      keyExtractor={(item) => item.id.toString()}
+      numColumns={4}
+      ListHeaderComponent={<Text style={styles.linkText}>Quick Links 589</Text>}
+      renderItem={({ item }) => (
+        <LinkIcon icon={item.icon} label={item.label} />
+      )}
+    />
   );
 };
 
@@ -64,9 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     padding: 15,
     marginBottom: 10,
-  },
-  link: {
-    flexGrow: 0,
+    // flexGrow: 0,
   },
   linkText: {
     fontSize: 16,

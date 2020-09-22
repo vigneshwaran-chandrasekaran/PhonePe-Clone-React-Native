@@ -8,7 +8,7 @@ const Header = () => {
     <View style={styles.header}>
       <View style={styles.locationSection}>
         <Text style={styles.location}>Your location</Text>
-        <Text style={styles.location}>Trichy</Text>
+        <Text style={styles.location}>Trichy 2</Text>
       </View>
       <View style={styles.iconsSection}>
         <LinkIcon icon={"gift"} color="white" size={24} />
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   iconsSection: {
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "flex-end",
     alignItems: "center",
     backgroundColor: "pink",
   },

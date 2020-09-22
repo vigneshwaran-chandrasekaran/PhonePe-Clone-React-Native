@@ -1,17 +1,17 @@
 // import Constants from "expo-constants";
 import React from "react";
-import { SafeAreaView, StyleSheet, View } from "react-native";
+import { SafeAreaView, ScrollView, StyleSheet, View } from "react-native";
 import Header from "../components/common/Header";
 
 function Screen({ children, style }) {
   return (
     <SafeAreaView style={[styles.safeScreen]}>
       <Header />
-      <View style={[styles.screen, style]}>
+      <ScrollView style={[styles.screen, style]}>
         <View style={[styles.view, style]}>
           <View>{children}</View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text } from "react-native";
 import colors from "../../../config/colors";
 import LinkIcon from "../../LinkIcon";
 
@@ -22,18 +22,18 @@ const transferMoney = [
 
 const TransferMoney = () => {
   return (
-    <View style={styles.linksContainer}>
-      <Text style={styles.linkText}>Transfer Money 1</Text>
-      <FlatList
-        style={styles.link}
-        data={transferMoney}
-        keyExtractor={(item) => item.id.toString()}
-        numColumns={4}
-        renderItem={({ item }) => (
-          <LinkIcon icon={item.icon} label={item.label} />
-        )}
-      />
-    </View>
+    <FlatList
+      style={styles.linksContainer}
+      data={transferMoney}
+      keyExtractor={(item) => item.id.toString()}
+      numColumns={4}
+      ListHeaderComponent={
+        <Text style={styles.linkText}>Transfer Money 22</Text>
+      }
+      renderItem={({ item }) => (
+        <LinkIcon icon={item.icon} label={item.label} />
+      )}
+    />
   );
 };
 
@@ -45,9 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     padding: 15,
     marginBottom: 10,
-  },
-  link: {
-    flexGrow: 0,
+    // flexGrow: 0,
   },
   linkText: {
     fontSize: 16,
