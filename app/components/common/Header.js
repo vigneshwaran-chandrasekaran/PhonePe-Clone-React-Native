@@ -2,11 +2,13 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import colors from "../../config/colors";
 import Icon from "./Icon";
+import ImageIcon from "./ImageIcon";
 
 const Header = () => {
   return (
     <View style={styles.header}>
       <View style={styles.locationSection}>
+        <ImageIcon />
         <Text style={styles.location}>Your location</Text>
         <Text style={styles.location}>Trichy 4</Text>
       </View>
