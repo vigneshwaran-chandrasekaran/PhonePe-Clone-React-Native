@@ -45,11 +45,12 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     padding: 15,
     marginBottom: 10,
+    paddingBottom: 0,
     // flexGrow: 0,
   },
   linkText: {
     fontSize: 16,
     fontWeight: "bold",
-    marginBottom: 20,
+    marginBottom: 10,
   },
 });

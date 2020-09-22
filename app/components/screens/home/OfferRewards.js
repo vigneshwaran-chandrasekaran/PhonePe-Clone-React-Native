@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import colors from "../../../config/colors";
 import ColorIcon from "../../ColorIcon";
 
@@ -29,17 +29,15 @@ const offerRewards = [
 
 const OfferRewards = () => {
   return (
-    <View style={styles.linksContainer}>
-      <FlatList
-        style={styles.link}
-        data={offerRewards}
-        keyExtractor={(item) => item.id.toString()}
-        numColumns={3}
-        renderItem={({ item }) => (
-          <ColorIcon icon={item.icon} label={item.label} options={item} />
-        )}
-      />
-    </View>
+    <FlatList
+      style={styles.linksContainer}
+      data={offerRewards}
+      keyExtractor={(item) => item.id.toString()}
+      numColumns={3}
+      renderItem={({ item }) => (
+        <ColorIcon icon={item.icon} label={item.label} options={item} />
+      )}
+    />
   );
 };
 
@@ -51,8 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     padding: 15,
     marginBottom: 10,
-  },
-  link: {
-    flexGrow: 0,
+    paddingBottom: 10,
+    // flexGrow: 0,
   },
 });

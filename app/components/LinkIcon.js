@@ -8,9 +8,10 @@ const LinkIcon = ({
   icon = "facebook",
   color = colors.primary,
   size = 36,
+  style,
 }) => {
   return (
-    <View style={styles.icon}>
+    <View style={[styles.icon, style]}>
       <FontAwesome name={icon} color={color} size={size} />
       {label && <Text style={styles.iconText}>{label}</Text>}
     </View>

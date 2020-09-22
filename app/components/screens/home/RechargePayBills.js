@@ -3,7 +3,7 @@ import { FlatList, StyleSheet, Text } from "react-native";
 import colors from "../../../config/colors";
 import LinkIcon from "../../LinkIcon";
 
-const quickLinks = [
+const rechargePayBills = [
   {
     id: 1,
     label: "Wallet Topup",
@@ -39,14 +39,16 @@ const quickLinks = [
   },
 ];
 
-const QuickLinks = () => {
+const RechargePayBills = () => {
   return (
     <FlatList
       style={styles.linksContainer}
-      data={quickLinks}
+      data={rechargePayBills}
       keyExtractor={(item) => item.id.toString()}
       numColumns={4}
-      ListHeaderComponent={<Text style={styles.linkText}>Quick Links 22</Text>}
+      ListHeaderComponent={
+        <Text style={styles.linkText}>Recharge & Pay Bills</Text>
+      }
       renderItem={({ item }) => (
         <LinkIcon icon={item.icon} label={item.label} />
       )}
@@ -54,7 +56,7 @@ const QuickLinks = () => {
   );
 };
 
-export default QuickLinks;
+export default RechargePayBills;
 
 const styles = StyleSheet.create({
   linksContainer: {
