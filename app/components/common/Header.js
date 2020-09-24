@@ -9,13 +9,18 @@ const Header = () => {
     <View style={styles.header}>
       <View style={styles.locationSection}>
         <ImageIcon />
-        <Text style={styles.location}>Your location</Text>
-        <Text style={styles.location}>Trichy 4</Text>
+        <View style={styles.locationText}>
+          <Text style={styles.locationTitle}>Your location</Text>
+          <View style={styles.locationChoose}>
+            <Text style={styles.location}>Trichy 4</Text>
+            <Icon name={"sort-desc"} style={styles.locationArrow} size={18} />
+          </View>
+        </View>
       </View>
       <View style={styles.iconsSection}>
-        <Icon name={"qrcode"} style={styles.icon} />
-        <Icon name={"bell"} style={styles.icon} />
-        <Icon name={"question-circle-o"} style={styles.icon} />
+        <Icon name={"qrcode"} style={styles.icon} size={30} />
+        <Icon name={"bell"} style={styles.icon} size={30} />
+        <Icon name={"question-circle-o"} style={styles.icon} size={30} />
       </View>
     </View>
   );
@@ -25,7 +30,6 @@ export default Header;
 
 const styles = StyleSheet.create({
   header: {
-    height: 50,
     padding: 10,
     backgroundColor: colors.primaryLight,
     flexDirection: "row",
@@ -34,10 +38,35 @@ const styles = StyleSheet.create({
   },
   locationSection: {
     flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+
+  locationText: {
+    paddingLeft: 15,
+    alignItems: "flex-start",
+    justifyContent: "center",
+    paddingTop: 10,
+  },
+  locationTitle: {
+    color: "#d3d3d3",
+    fontSize: 12,
+    marginBottom: -8,
+  },
+  locationChoose: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   location: {
     color: colors.white,
+    fontSize: 16,
   },
+  locationArrow: {
+    marginBottom: 5,
+  },
+
   iconsSection: {
     flex: 1,
     flexDirection: "row",
@@ -45,6 +74,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   icon: {
-    paddingLeft: 20,
+    paddingLeft: 15,
   },
 });
