@@ -31,6 +31,8 @@ export default Header;
 const styles = StyleSheet.create({
   header: {
     padding: 10,
+    paddingBottom: 5,
+    paddingTop: 5,
     backgroundColor: colors.primaryLight,
     flexDirection: "row",
     justifyContent: "space-between",
