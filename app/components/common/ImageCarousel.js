@@ -1,6 +1,8 @@
 import * as React from "react";
-import { SafeAreaView, Text, View } from "react-native";
+import { Dimensions, Text, View } from "react-native";
 import Carousel from "react-native-snap-carousel";
+
+const width = Dimensions.get("window")?.width - 20;
 
 export default class App extends React.Component {
   constructor(props) {
@@ -34,29 +36,36 @@ export default class App extends React.Component {
 
   _renderItem = ({ item, index }) => {
     return (
-      <View>
-        <Text>{item.text}</Text>
+      <View
+        style={{
+          backgroundColor: "floralwhite",
+          borderRadius: 5,
+          margin: 10,
+          height: 250,
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Text style={{ fontSize: 30, color: "red" }}>{item.title}</Text>
+        <Text style={{ fontSize: 30, color: "red" }}>{item.text}</Text>
       </View>
     );
   };
 
   render() {
     return (
-      <SafeAreaView style={{ flex: 1, paddingTop: 250 }}>
-        <View
-          style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}
-        >
-          <Carousel
-            layout={"default"}
-            ref={(ref) => (this.carousel = ref)}
-            data={this.state.carouselItems}
-            sliderWidth={100}
-            itemWidth={100}
-            renderItem={this._renderItem}
-            onSnapToItem={(index) => this.setState({ activeIndex: index })}
-          />
-        </View>
-      </SafeAreaView>
+      <View>
+        <Carousel
+          data={this.state.carouselItems}
+          renderItem={this._renderItem}
+          itemWidth={width}
+          sliderWidth={width}
+          layout={"default"}
+          ref={(ref) => (this.carousel = ref)}
+          onSnapToItem={(index) => this.setState({ activeIndex: index })}
+        />
+      </View>
     );
   }
 }
