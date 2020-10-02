@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Dimensions, Image, Text, View } from "react-native";
+import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import banner1 from "../../assets/banners/banner1.jpg";
 import banner2 from "../../assets/banners/banner2.jpg";
@@ -39,20 +39,8 @@ const carouselItems = [
 
 const _renderItem = ({ item }) => {
   return (
-    <View
-      style={{
-        backgroundColor: "floralwhite",
-        borderRadius: 5,
-        margin: 10,
-        height: 250,
-        textAlign: "center",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Text style={{ fontSize: 30, color: "blue" }}>{item.title}</Text>
-      <Text style={{ fontSize: 30, color: "green" }}>{item.text}</Text>
-      <Image source={item.image} />
+    <View>
+      <Image style={styles.image} source={item.image} resizeMode={"cover"} />
     </View>
   );
 };
@@ -78,3 +66,10 @@ const ImageCarousel = () => {
 };
 
 export default ImageCarousel;
+
+const styles = StyleSheet.create({
+  image: {
+    width: "100%",
+    height: 150,
+  },
+});
