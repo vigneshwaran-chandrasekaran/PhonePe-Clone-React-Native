@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
-import Carousel from "react-native-snap-carousel";
+import Carousel, { Pagination } from "react-native-snap-carousel";
 import banner1 from "../../assets/banners/banner1.jpg";
 import banner2 from "../../assets/banners/banner2.jpg";
 import banner3 from "../../assets/banners/banner3.jpg";
@@ -59,6 +59,26 @@ const ImageCarousel = () => {
         layout={"default"}
         ref={inputEl}
         onSnapToItem={(index) => setActiveIndex(index)}
+        dotColor={"green"}
+        inactiveDotColor={"red"}
+      />
+      <Pagination
+        dotsLength={carouselItems.length} // also based on number of sildes you want
+        activeDotIndex={activeIndex}
+        carouselRef={inputEl}
+        // containerStyle={{ backgroundColor: "white" }}
+        dotStyle={{
+          width: 10,
+          height: 10,
+          borderRadius: 5,
+          backgroundColor: "black",
+        }}
+        inactiveDotStyle={{
+          backgroundColor: "gray",
+        }}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
+        tappableDots={true}
       />
       <Text>activeIndex: {activeIndex}</Text>
     </View>
