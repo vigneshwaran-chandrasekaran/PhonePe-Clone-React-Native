@@ -7,7 +7,8 @@ import banner4 from "../assets/banners/banner4.jpg";
 import banner5 from "../assets/banners/banner5.png";
 import ImageCarousel from "../components/common/ImageCarousel";
 import Screen from "../components/Screen";
-import { Investments } from "../components/screens/myMoney";
+import { Insurance, Investments } from "../components/screens/myMoney";
+
 const carouselItems = [
   {
     title: "Item 111",
@@ -41,6 +42,7 @@ const MyMoneyScreen = () => {
     <Screen>
       <ImageCarousel carouselItems={carouselItems} />
       <Investments />
+      <Insurance />
     </Screen>
   );
 };
